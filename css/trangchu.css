@@ -126,13 +126,22 @@ img {
 }
 
 .item-desc p {
+  display: none;
+  overflow-wrap: break-word;
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
   transition: all 0.4s ease-in-out 0.2s;
   -webkit-transition: all 0.4s ease-in-out 0.2s;
+  word-break: break-all;
 }
-
+.item.active:hover {
+   width: 600px;
+   height: 250px;
+}
+.item.active :hover p {
+  display: block;
+}
 .item.active .item-desc p {
   opacity: 1;
   -webkit-transform: translateY(0);

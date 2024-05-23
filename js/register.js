@@ -9,14 +9,25 @@ let users= JSON.parse(localStorage.getItem("user"))|| [
 ]
 
 
-form.addEventListener("submit",function (){
+form.addEventListener("submit",function (e){    
+    e.preventDefault()
+   let index= users.findIndex(item=>item.Email == email.value)
+   if (index== -1){
     var user = {
         "username":username.value,
         "phone-number":phone_number.value,
         "Email":email.value,
         "pass":password.value
-    }
-    users.push(user)
+    }       
+    users.push(user)                                          
     localStorage.setItem("user", JSON.stringify(users))
+    alert("Thành công")
+   } 
+   else alert("Email đã tồn tại")
+    
    
 })
+//  for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+    
+//  }

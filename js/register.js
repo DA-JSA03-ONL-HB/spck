@@ -22,12 +22,9 @@ form.addEventListener("submit",function (e){
     users.push(user)                                          
     localStorage.setItem("user", JSON.stringify(users))
     alert("Thành công")
+    window.location.href='../html/login.html'
    } 
    else alert("Email đã tồn tại")
     
    
 })
-//  for (let index = 0; index < array.length; index++) {
-//     const element = array[index];
-    
-//  }
